@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7FA62B391DECA326009955ED /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA62B381DECA326009955ED /* String+Extension.swift */; };
+		7FA62B3D1DECA685009955ED /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA62B3C1DECA685009955ED /* Int+Extension.swift */; };
 		7FEB32841DEB1675004F9FFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEB32831DEB1675004F9FFA /* AppDelegate.swift */; };
 		7FEB32861DEB1675004F9FFA /* AllGroceryListsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEB32851DEB1675004F9FFA /* AllGroceryListsViewController.swift */; };
 		7FEB32891DEB1675004F9FFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FEB32871DEB1675004F9FFA /* Main.storyboard */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7FA62B381DECA326009955ED /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		7FA62B3C1DECA685009955ED /* Int+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
 		7FEB32801DEB1675004F9FFA /* groceryList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = groceryList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FEB32831DEB1675004F9FFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7FEB32851DEB1675004F9FFA /* AllGroceryListsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGroceryListsViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +104,8 @@
 			children = (
 				7FEB32B11DEB59BA004F9FFA /* Array+Extension.swift */,
 				7FEB32BB1DEB5A42004F9FFA /* UIViewController+Extension.swift */,
+				7FA62B381DECA326009955ED /* String+Extension.swift */,
+				7FA62B3C1DECA685009955ED /* Int+Extension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -185,6 +191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7FEB32C61DEB6381004F9FFA /* DataManager.swift in Sources */,
+				7FA62B391DECA326009955ED /* String+Extension.swift in Sources */,
 				7FEB32CC1DEB6471004F9FFA /* GroceryList+CoreDataProperties.swift in Sources */,
 				7FEB32BC1DEB5A42004F9FFA /* UIViewController+Extension.swift in Sources */,
 				7FEB32861DEB1675004F9FFA /* AllGroceryListsViewController.swift in Sources */,
@@ -192,6 +199,7 @@
 				7FEB32841DEB1675004F9FFA /* AppDelegate.swift in Sources */,
 				7FEB328C1DEB1675004F9FFA /* groceryList.xcdatamodeld in Sources */,
 				7FEB32CD1DEB6471004F9FFA /* GroceryItem+CoreDataClass.swift in Sources */,
+				7FA62B3D1DECA685009955ED /* Int+Extension.swift in Sources */,
 				7FEB32CE1DEB6471004F9FFA /* GroceryItem+CoreDataProperties.swift in Sources */,
 				7FEB32B21DEB59BA004F9FFA /* Array+Extension.swift in Sources */,
 			);
@@ -355,6 +363,7 @@
 				7FEB32971DEB1675004F9FFA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

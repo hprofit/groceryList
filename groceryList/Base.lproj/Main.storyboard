@@ -10,42 +10,74 @@
     </dependencies>
     <scenes>
         <!--Grocery Lists-->
-        <scene sceneID="kdu-JI-1V4">
+        <scene sceneID="b6W-fg-Q9D">
             <objects>
-                <tableViewController id="BCN-ae-K5G" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="txJ-vk-J7A">
+                <viewController id="fDi-Gt-NUx" customClass="AllGroceryListsViewController" customModule="groceryList" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Xdx-Qt-5Zo"/>
+                        <viewControllerLayoutGuide type="bottom" id="wGT-yG-Sqk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zvf-Vn-sKR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6Ub-iV-YRr">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="6oz-6F-ODO" detailTextLabel="1Sn-6F-VFP" style="IBUITableViewCellStyleValue1" id="7ZR-9A-fdy" customClass="GroceryListCell" customModule="groceryList" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7ZR-9A-fdy" id="oF8-E9-gbP">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="List Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6oz-6F-ODO">
+                                                    <rect key="frame" x="15" y="11" width="77" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1Sn-6F-VFP">
+                                                    <rect key="frame" x="316" y="11" width="44" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="listCountLabel" destination="1Sn-6F-VFP" id="uRj-gr-UvH"/>
+                                            <outlet property="listNameLabel" destination="6oz-6F-ODO" id="bkb-9x-Oe6"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="GsH-df-iAP">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GsH-df-iAP" id="lub-L9-axe">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XVE-3j-iIk">
-                                            <rect key="frame" x="17" y="11" width="42" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
+                    </view>
+                    <navigationItem key="navigationItem" title="Grocery Lists" id="0OP-Yr-bXp">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="YfE-gc-2v5">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="NKG-2a-2jB">
+                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="+"/>
+                            </button>
+                        </barButtonItem>
                         <connections>
-                            <outlet property="dataSource" destination="BCN-ae-K5G" id="1lw-3E-YxJ"/>
-                            <outlet property="delegate" destination="BCN-ae-K5G" id="4Co-33-UdM"/>
+                            <outlet property="rightBarButtonItem" destination="YfE-gc-2v5" id="cY8-Ha-XZC"/>
                         </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Grocery Lists" id="pk9-rn-1hO"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8sO-hW-j3p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="groceryListsTableView" destination="6Ub-iV-YRr" id="wV3-O2-Lly"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="96A-5b-Z4w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1828" y="137"/>
+            <point key="canvasLocation" x="1736.8" y="135.38230884557723"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kRa-1w-5L2">
@@ -56,7 +88,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="BCN-ae-K5G" kind="relationship" relationship="rootViewController" id="1ZY-dF-2B2"/>
+                        <segue destination="fDi-Gt-NUx" kind="relationship" relationship="rootViewController" id="OK2-ZP-uab"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xn9-OJ-dm1" userLabel="First Responder" sceneMemberID="firstResponder"/>

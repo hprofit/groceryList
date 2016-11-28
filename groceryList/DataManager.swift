@@ -59,6 +59,10 @@ extension DataManager {
     func getGroceryListName(from indexPath: IndexPath) -> String? {
         return allGroceryLists.value(at: indexPath.row)?.name
     }
+    
+    func getGroceryListCount(from indexPath: IndexPath) -> Int? {
+        return allGroceryLists.value(at: indexPath.row)?.groceries?.count
+    }
 }
 
 extension DataManager {
