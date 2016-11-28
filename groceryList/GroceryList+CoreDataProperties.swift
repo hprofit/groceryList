@@ -4,7 +4,6 @@
 //
 //  Created by Profit, Holden on 11/27/16.
 //  Copyright © 2016 Profit, Holden. All rights reserved.
-//  This file was automatically generated and should not be edited.
 //
 
 import Foundation
@@ -18,6 +17,24 @@ extension GroceryList {
     }
 
     @NSManaged public var name: String?
-    @NSManaged public var list: NSData?
+    @NSManaged public var groceries: NSSet?
 
+}
+
+
+// MARK: Generated accessors for people
+extension GroceryList {
+    
+    @objc(addGroceryItemObject:)
+    @NSManaged public func addToGroceries(_ value: GroceryItem)
+    
+    @objc(removeGroceryItemObject:)
+    @NSManaged public func removeFromGroceries(_ value: GroceryItem)
+    
+    @objc(addGroceries:)
+    @NSManaged public func addToGroceries(_ values: NSSet)
+    
+    @objc(removeGroceries:)
+    @NSManaged public func removeFromGroceries(_ values: NSSet)
+    
 }
