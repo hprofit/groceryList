@@ -60,6 +60,10 @@ extension DataManager {
         return allGroceryLists.value(at: indexPath.row)?.name
     }
     
+    func getGroceryListName(from index: Int) -> String? {
+        return allGroceryLists.value(at: index)?.name
+    }
+    
     func getGroceryListCount(from indexPath: IndexPath) -> Int? {
         return allGroceryLists.value(at: indexPath.row)?.groceries?.count
     }
@@ -78,7 +82,7 @@ extension DataManager {
         guard let ctx = managedObjectContext else {
             throw DataError.BadManagedObjectContext("The managed object context was nil")
         }
-        guard let entity = NSEntityDescription.entity(forEntityName: "MyData", in: ctx) else {
+        guard let entity = NSEntityDescription.entity(forEntityName: "GroceryItem", in: ctx) else {
             throw DataError.BadEntity("The entity description was bad")
         }
         let obj = GroceryItem(entity: entity, insertInto: ctx)

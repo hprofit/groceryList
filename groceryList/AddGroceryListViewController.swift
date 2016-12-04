@@ -14,8 +14,16 @@ class AddGroceryListViewController: UIViewController {
     
     var manager = DataManager.shared
     
+    func dismissView() {
+        dismiss(animated: UIView.areAnimationsEnabled, completion: nil)
+    }
+    
     @IBAction func add() {
         try? manager.create(groceryListNamed: nameField?.text)
-        dismiss(animated: UIView.areAnimationsEnabled, completion: nil)
+        dismissView()
+    }
+    
+    @IBAction func dismiss() {
+        dismissView()
     }
 }

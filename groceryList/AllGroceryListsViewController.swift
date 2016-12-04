@@ -36,7 +36,7 @@ class AllGroceryListsViewController: UIViewController, UITableViewDataSource, UI
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? GroceryListCell
         
         cell?.listNameLabel?.text = manager.getGroceryListName(from: indexPath)
-        cell?.listCountLabel?.text = manager.getGroceryListCount(from: indexPath)?.stringValue
+        cell?.listCountLabel?.text = "Items: \(manager.getGroceryListCount(from: indexPath) ?? 0)"
         
         return cell!
     }
