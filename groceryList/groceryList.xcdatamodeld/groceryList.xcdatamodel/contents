@@ -7,7 +7,7 @@
     </entity>
     <entity name="GroceryList" representedClassName=".GroceryList" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="groceries" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GroceryItem" inverseName="groceryList" inverseEntity="GroceryItem" syncable="YES"/>
+        <relationship name="groceries" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="GroceryItem" inverseName="groceryList" inverseEntity="GroceryItem" syncable="YES"/>
     </entity>
     <elements>
         <element name="GroceryItem" positionX="-45" positionY="0" width="128" height="90"/>
