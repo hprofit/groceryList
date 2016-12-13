@@ -28,7 +28,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" textLabel="6oz-6F-ODO" detailTextLabel="1Sn-6F-VFP" style="IBUITableViewCellStyleValue1" id="7ZR-9A-fdy" customClass="GroceryListCell" customModule="groceryList" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" textLabel="6oz-6F-ODO" detailTextLabel="1Sn-6F-VFP" style="IBUITableViewCellStyleValue1" id="7ZR-9A-fdy">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7ZR-9A-fdy" id="oF8-E9-gbP">
@@ -52,8 +52,6 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="listCountLabel" destination="1Sn-6F-VFP" id="uRj-gr-UvH"/>
-                                            <outlet property="listNameLabel" destination="6oz-6F-ODO" id="bkb-9x-Oe6"/>
                                             <segue destination="tBb-mP-EGP" kind="show" id="1YR-kz-9I1"/>
                                         </connections>
                                     </tableViewCell>
@@ -83,14 +81,14 @@
                         </connections>
                     </navigationItem>
                     <connections>
-                        <outlet property="groceryListsTableView" destination="6Ub-iV-YRr" id="9c3-2b-yhp"/>
+                        <outlet property="groceryListsTableView" destination="6Ub-iV-YRr" id="qvf-Eg-peT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="96A-5b-Z4w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1793" y="136"/>
         </scene>
-        <!--Title-->
+        <!--Grocery List-->
         <scene sceneID="wtb-gN-nUb">
             <objects>
                 <viewController id="tBb-mP-EGP" customClass="GroceryListViewController" customModule="groceryList" customModuleProvider="target" sceneMemberID="viewController">
@@ -102,26 +100,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="39" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8q9-wo-gw0">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Rby-v9-wbc">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="HCk-y0-PDz" detailTextLabel="CEX-wf-8Xy" rowHeight="39" style="IBUITableViewCellStyleValue1" id="EOB-8v-Y45">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="39"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="nhA-ih-Bkb" detailTextLabel="UHd-XX-wIe" style="IBUITableViewCellStyleValue1" id="SfV-vD-hyB">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EOB-8v-Y45" id="tUc-gp-7LS">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="38.5"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SfV-vD-hyB" id="pGM-d2-W5A">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HCk-y0-PDz">
-                                                    <rect key="frame" x="15" y="9" width="33.5" height="20.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nhA-ih-Bkb">
+                                                    <rect key="frame" x="15" y="11" width="34" height="21"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CEX-wf-8Xy">
-                                                    <rect key="frame" x="316" y="9" width="44" height="20.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UHd-XX-wIe">
+                                                    <rect key="frame" x="316" y="11" width="44" height="21"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                                     <nil key="textColor"/>
@@ -132,20 +131,14 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="tBb-mP-EGP" id="Jwq-yp-9PP"/>
-                                    <outlet property="delegate" destination="tBb-mP-EGP" id="Ny4-Th-gLK"/>
+                                    <outlet property="dataSource" destination="tBb-mP-EGP" id="8FU-Yh-SEF"/>
+                                    <outlet property="delegate" destination="tBb-mP-EGP" id="7MI-aG-X6D"/>
                                 </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="8q9-wo-gw0" firstAttribute="bottom" secondItem="HDn-v4-9Hy" secondAttribute="top" id="1bI-WS-p7h"/>
-                            <constraint firstItem="8q9-wo-gw0" firstAttribute="leading" secondItem="5HW-JI-816" secondAttribute="leading" id="TA5-vi-KR1"/>
-                            <constraint firstAttribute="trailing" secondItem="8q9-wo-gw0" secondAttribute="trailing" id="kZz-vu-0Ai"/>
-                            <constraint firstItem="8q9-wo-gw0" firstAttribute="top" secondItem="URV-nl-8Jw" secondAttribute="bottom" id="tr1-oe-GGd"/>
-                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="yLD-It-RnU">
+                    <navigationItem key="navigationItem" title="Grocery List" id="yLD-It-RnU">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="phr-fB-Z7f">
                             <connections>
                                 <segue destination="12K-XX-G9F" kind="presentation" id="onl-uN-eyN"/>
@@ -153,6 +146,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="dataTableView" destination="Rby-v9-wbc" id="Ut8-Fy-tKl"/>
                         <outlet property="navBarView" destination="yLD-It-RnU" id="mWi-eg-bZL"/>
                     </connections>
                 </viewController>
@@ -216,6 +210,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="JQo-9r-xeh" firstAttribute="trailing" secondItem="Ire-U6-vb3" secondAttribute="trailingMargin" id="4Rn-GD-NTy"/>
                             <constraint firstItem="JQo-9r-xeh" firstAttribute="top" secondItem="HEK-Xu-kwV" secondAttribute="bottom" constant="8" symbolic="YES" id="Bts-Wk-S2D"/>
@@ -231,12 +226,20 @@
                             <constraint firstItem="JQo-9r-xeh" firstAttribute="leading" secondItem="XZq-NO-DLL" secondAttribute="leading" id="rBg-Ez-Afd"/>
                             <constraint firstAttribute="bottom" secondItem="RfW-V8-TRc" secondAttribute="bottom" constant="20" symbolic="YES" id="veg-R8-v75"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Isv-1x-hjn" appends="YES" id="cvE-iI-6zI"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="nameField" destination="XZq-NO-DLL" id="XEJ-62-MuX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pnh-3Q-Cfp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Isv-1x-hjn">
+                    <connections>
+                        <action selector="dismissKeyboard" destination="ci5-Xz-pOE" id="yq5-K3-jwI"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1793" y="868"/>
         </scene>
@@ -325,6 +328,7 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="jSS-Q2-f0C" firstAttribute="leading" secondItem="hBv-Rt-P5a" secondAttribute="leading" id="3Sm-uU-stc"/>
                             <constraint firstItem="4Gw-nf-APg" firstAttribute="leading" secondItem="Bxf-sd-6FW" secondAttribute="leadingMargin" id="3bt-mh-fDc"/>
@@ -349,6 +353,9 @@
                             <constraint firstItem="RN4-gd-TE6" firstAttribute="trailing" secondItem="wcQ-HD-uS9" secondAttribute="trailing" id="uwg-yu-JVN"/>
                             <constraint firstItem="wcQ-HD-uS9" firstAttribute="baseline" secondItem="qSb-cg-Qlk" secondAttribute="firstBaseline" id="yup-Ly-5MS"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="EDu-dB-jlB" appends="YES" id="vH6-jW-0kz"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="nameField" destination="hBv-Rt-P5a" id="frE-04-gAm"/>
@@ -356,6 +363,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oPA-PS-APs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="EDu-dB-jlB">
+                    <connections>
+                        <action selector="dismissKeyboard" destination="12K-XX-G9F" id="6aC-rV-qxf"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2516" y="868"/>
         </scene>

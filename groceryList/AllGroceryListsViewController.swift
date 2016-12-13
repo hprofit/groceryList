@@ -8,11 +8,6 @@
 
 import UIKit
 
-class GroceryListCell: UITableViewCell {
-    @IBOutlet var listNameLabel: UILabel?
-    @IBOutlet var listCountLabel: UILabel?
-}
-
 class AllGroceryListsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet var groceryListsTableView: UITableView?
@@ -33,18 +28,18 @@ class AllGroceryListsViewController: UIViewController, UITableViewDataSource, UI
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? GroceryListCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
-        cell?.listNameLabel?.text = manager.getGroceryListName(from: indexPath)
-        cell?.listCountLabel?.text = "Items: \(manager.getGroceryListCount(from: indexPath) ?? 0)"
+        cell.textLabel?.text = manager.getGroceryListName(from: indexPath)
+        cell.detailTextLabel?.text = "Items: \(manager.getGroceryListCount(from: indexPath) ?? 0)"
         
-        return cell!
+        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: UIView.areAnimationsEnabled)
         
-        manager.selectedGroceryListIndex = indexPath.row
+        manager.selectedListIndex = indexPath.row
     }
 }
 

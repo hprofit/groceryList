@@ -22,19 +22,19 @@ class DataManager {
         return allGroceryLists.count
     }
     
-    var groceryList: [GroceryItem]
-    var groceryListCount: Int {
-        return groceryList.count
+    var currentList: [GroceryItem]
+    var currentListCount: Int {
+        return currentList.count
     }
     
-    var selectedGroceryListIndex: Int
-    var selectedGroceryItemIndex: Int
+    var selectedListIndex: Int
+    var selectedItemIndex: Int
     
     private init() {
         allGroceryLists = []
-        groceryList = []
-        selectedGroceryListIndex = -1
-        selectedGroceryItemIndex = -1
+        currentList = []
+        selectedListIndex = -1
+        selectedItemIndex = -1
     }
 }
 
@@ -72,10 +72,10 @@ extension DataManager {
 extension DataManager {
     // MARK: - Get / Create New GroceryItem
     func loadGroceryItemData() {
-        let selectedGroceryList = allGroceryLists.value(at: selectedGroceryListIndex)
-        groceryList = selectedGroceryList?.groceries?.flatMap { item in
+        let selectedGroceryList = allGroceryLists.value(at: selectedListIndex)
+        currentList = selectedGroceryList?.groceries?.flatMap { item in
             return item as? GroceryItem
-            } ?? []
+        } ?? []
     }
     
     func create(data: (name: String?, quantity: Int)) throws {
@@ -88,20 +88,20 @@ extension DataManager {
         let obj = GroceryItem(entity: entity, insertInto: ctx)
         obj.name = data.name
         obj.quantity = Int16(data.quantity)
-        obj.groceryList = allGroceryLists.value(at: selectedGroceryListIndex)
+        obj.groceryList = allGroceryLists.value(at: selectedListIndex)
         
         try? save()
     }
     
     func getGroceryItem(from indexPath: IndexPath) -> (name: String?, quantity: Int)? {
-        guard let item = groceryList.value(at: indexPath.row) else {
+        guard let item = currentList.value(at: indexPath.row) else {
             return nil
         }
         return (item.name, Int(item.quantity))
     }
     
     func getSelectedGroceryItem() -> (name: String?, quantity: Int)? {
-        guard let item = groceryList.value(at: selectedGroceryItemIndex) else {
+        guard let item = currentList.value(at: selectedItemIndex) else {
             return nil
         }
         return (item.name, Int(item.quantity))

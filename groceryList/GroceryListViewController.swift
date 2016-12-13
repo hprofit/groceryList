@@ -19,14 +19,14 @@ class GroceryListViewController: UIViewController, UITableViewDataSource, UITabl
         super.viewWillAppear(animated)
         
         manager.loadGroceryItemData()
-        navBarView?.title = manager.getGroceryListName(from: manager.selectedGroceryListIndex)
+        navBarView?.title = manager.getGroceryListName(from: manager.selectedListIndex)
         dataTableView?.reloadData()
     }
     
     // MARK: - Table View
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return manager.groceryListCount
+        return manager.currentListCount
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -42,6 +42,6 @@ class GroceryListViewController: UIViewController, UITableViewDataSource, UITabl
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: UIView.areAnimationsEnabled)
         
-        manager.selectedGroceryItemIndex = indexPath.row
+        manager.selectedItemIndex = indexPath.row
     }
 }
