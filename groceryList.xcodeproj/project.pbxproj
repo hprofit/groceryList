@@ -25,6 +25,7 @@
 		7FEB32CC1DEB6471004F9FFA /* GroceryList+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEB32C81DEB6471004F9FFA /* GroceryList+CoreDataProperties.swift */; };
 		7FEB32CD1DEB6471004F9FFA /* GroceryItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEB32C91DEB6471004F9FFA /* GroceryItem+CoreDataClass.swift */; };
 		7FEB32CE1DEB6471004F9FFA /* GroceryItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEB32CA1DEB6471004F9FFA /* GroceryItem+CoreDataProperties.swift */; };
+		7FFCE9B11E353D9200C6B2BA /* UIEditableTableController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFCE9B01E353D9200C6B2BA /* UIEditableTableController+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		7FEB32C81DEB6471004F9FFA /* GroceryList+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GroceryList+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		7FEB32C91DEB6471004F9FFA /* GroceryItem+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GroceryItem+CoreDataClass.swift"; sourceTree = "<group>"; };
 		7FEB32CA1DEB6471004F9FFA /* GroceryItem+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GroceryItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		7FFCE9B01E353D9200C6B2BA /* UIEditableTableController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIEditableTableController+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				7FEB32BB1DEB5A42004F9FFA /* UIViewController+Extension.swift */,
 				7FA62B381DECA326009955ED /* String+Extension.swift */,
 				7FA62B3C1DECA685009955ED /* Int+Extension.swift */,
+				7FFCE9B01E353D9200C6B2BA /* UIEditableTableController+Extension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -119,12 +122,28 @@
 		7FEB32A81DEB183B004F9FFA /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				7FFCE9B31E3544FA00C6B2BA /* GroceryList */,
+				7FFCE9B21E3544C700C6B2BA /* AllGroceryLists */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		7FFCE9B21E3544C700C6B2BA /* AllGroceryLists */ = {
+			isa = PBXGroup;
+			children = (
 				7FEB32851DEB1675004F9FFA /* AllGroceryListsViewController.swift */,
 				7FA62B3E1DECACA7009955ED /* AddGroceryListViewController.swift */,
+			);
+			name = AllGroceryLists;
+			sourceTree = "<group>";
+		};
+		7FFCE9B31E3544FA00C6B2BA /* GroceryList */ = {
+			isa = PBXGroup;
+			children = (
 				7F346E8E1DECBD9D0091F307 /* GroceryListViewController.swift */,
 				7F12A2E81DECFA5600A8933E /* AddGroceryItemController.swift */,
 			);
-			name = "View Controllers";
+			name = GroceryList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,6 +231,7 @@
 				7FEB328C1DEB1675004F9FFA /* groceryList.xcdatamodeld in Sources */,
 				7FEB32CD1DEB6471004F9FFA /* GroceryItem+CoreDataClass.swift in Sources */,
 				7FA62B3D1DECA685009955ED /* Int+Extension.swift in Sources */,
+				7FFCE9B11E353D9200C6B2BA /* UIEditableTableController+Extension.swift in Sources */,
 				7FEB32CE1DEB6471004F9FFA /* GroceryItem+CoreDataProperties.swift in Sources */,
 				7FEB32B21DEB59BA004F9FFA /* Array+Extension.swift in Sources */,
 			);

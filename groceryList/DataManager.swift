@@ -56,12 +56,33 @@ extension DataManager {
         try? save()
     }
     
+    // MARK: - Delete GroceryList
+    func delete(groceryList listToDelete: GroceryList?) throws {
+        guard let ctx = managedObjectContext else {
+            throw DataError.BadManagedObjectContext("The managed object context was nil")
+        }
+        guard let uwListToDelete = listToDelete else {
+            throw DataError.BadEntity("Entity to delete is nil")
+        }
+        ctx.delete(uwListToDelete)
+        try? save()
+        loadGroceryListData()
+    }
+    
     func getGroceryListName(from indexPath: IndexPath) -> String? {
         return allGroceryLists.value(at: indexPath.row)?.name
     }
     
     func getGroceryListName(from index: Int) -> String? {
         return allGroceryLists.value(at: index)?.name
+    }
+    
+    func getGroceryList(from indexPath: IndexPath) -> GroceryList? {
+        return allGroceryLists.value(at: indexPath.row)
+    }
+    
+    func getGroceryList(from index: Int) -> GroceryList? {
+        return allGroceryLists.value(at: index)
     }
     
     func getGroceryListCount(from indexPath: IndexPath) -> Int? {
@@ -91,6 +112,19 @@ extension DataManager {
         obj.groceryList = allGroceryLists.value(at: selectedListIndex)
         
         try? save()
+    }
+    
+    // MARK: - Delete GroceryItem
+    func delete(groceryItemIndex itemToDeleteIndex: Int) throws {
+        guard let ctx = managedObjectContext else {
+            throw DataError.BadManagedObjectContext("The managed object context was nil")
+        }
+        guard let itemToDelete = currentList.value(at: itemToDeleteIndex) else {
+            throw DataError.BadEntity("Entity to delete is nil")
+        }
+        ctx.delete(itemToDelete)
+        try? save()
+        loadGroceryItemData()
     }
     
     func getGroceryItem(from indexPath: IndexPath) -> (name: String?, quantity: Int)? {

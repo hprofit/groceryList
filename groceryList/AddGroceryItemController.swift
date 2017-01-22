@@ -20,7 +20,7 @@ class AddGroceryItemViewController: UIViewController {
     }
     
     lazy var alertCtrl: UIAlertController = {
-        let alert = UIAlertController(title: "Error", message: "Please enter a valid quantity and name!", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Error", message: "Please enter a valid quantity!", preferredStyle: .alert)
         alert.addAction( UIAlertAction(title: "OK", style: .cancel, handler: nil) )
         return alert
     }()
