@@ -8,16 +8,12 @@
 
 import UIKit
 
-class AddGroceryItemViewController: UIViewController {
+class AddGroceryItemViewController: UIDismissableController {
     
     @IBOutlet var nameField: UITextField?
     @IBOutlet var quantityField: UITextField?
     
     var manager = DataManager.shared
-    
-    func dismissView() {
-        dismiss(animated: UIView.areAnimationsEnabled, completion: nil)
-    }
     
     lazy var alertCtrl: UIAlertController = {
         let alert = UIAlertController(title: "Error", message: "Please enter a valid quantity!", preferredStyle: .alert)
@@ -35,10 +31,6 @@ class AddGroceryItemViewController: UIViewController {
             return
         }
         try? manager.create(data: (name: name, quantity: quantity))
-        dismissView()
-    }
-    
-    @IBAction func dismiss() {
         dismissView()
     }
 }

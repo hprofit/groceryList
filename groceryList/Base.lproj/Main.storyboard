@@ -212,7 +212,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="dismiss" destination="ci5-Xz-pOE" eventType="touchUpInside" id="BWa-NG-KQg"/>
+                                    <action selector="dismissView" destination="ci5-Xz-pOE" eventType="touchUpInside" id="Urc-li-oaX"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -285,7 +285,7 @@
                                 </state>
                                 <connections>
                                     <action selector="dismiss" destination="ci5-Xz-pOE" eventType="touchUpInside" id="Yud-Nh-wR2"/>
-                                    <action selector="dismiss" destination="12K-XX-G9F" eventType="touchUpInside" id="fXT-6A-f9t"/>
+                                    <action selector="dismissView" destination="12K-XX-G9F" eventType="touchUpInside" id="sk6-kr-H9E"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Grocery Item" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Gw-nf-APg">

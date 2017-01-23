@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7F12A2E91DECFA5600A8933E /* AddGroceryItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F12A2E81DECFA5600A8933E /* AddGroceryItemController.swift */; };
 		7F346E8F1DECBD9D0091F307 /* GroceryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F346E8E1DECBD9D0091F307 /* GroceryListViewController.swift */; };
+		7F6C90831E36C0D10015B7DD /* UIDismissableController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6C90821E36C0D10015B7DD /* UIDismissableController+Extension.swift */; };
 		7FA62B391DECA326009955ED /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA62B381DECA326009955ED /* String+Extension.swift */; };
 		7FA62B3D1DECA685009955ED /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA62B3C1DECA685009955ED /* Int+Extension.swift */; };
 		7FA62B3F1DECACA7009955ED /* AddGroceryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA62B3E1DECACA7009955ED /* AddGroceryListViewController.swift */; };
@@ -31,6 +32,7 @@
 /* Begin PBXFileReference section */
 		7F12A2E81DECFA5600A8933E /* AddGroceryItemController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddGroceryItemController.swift; sourceTree = "<group>"; };
 		7F346E8E1DECBD9D0091F307 /* GroceryListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroceryListViewController.swift; sourceTree = "<group>"; };
+		7F6C90821E36C0D10015B7DD /* UIDismissableController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDismissableController+Extension.swift"; sourceTree = "<group>"; };
 		7FA62B381DECA326009955ED /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		7FA62B3C1DECA685009955ED /* Int+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
 		7FA62B3E1DECACA7009955ED /* AddGroceryListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddGroceryListViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				7FA62B381DECA326009955ED /* String+Extension.swift */,
 				7FA62B3C1DECA685009955ED /* Int+Extension.swift */,
 				7FFCE9B01E353D9200C6B2BA /* UIEditableTableController+Extension.swift */,
+				7F6C90821E36C0D10015B7DD /* UIDismissableController+Extension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 				7FEB328C1DEB1675004F9FFA /* groceryList.xcdatamodeld in Sources */,
 				7FEB32CD1DEB6471004F9FFA /* GroceryItem+CoreDataClass.swift in Sources */,
 				7FA62B3D1DECA685009955ED /* Int+Extension.swift in Sources */,
+				7F6C90831E36C0D10015B7DD /* UIDismissableController+Extension.swift in Sources */,
 				7FFCE9B11E353D9200C6B2BA /* UIEditableTableController+Extension.swift in Sources */,
 				7FEB32CE1DEB6471004F9FFA /* GroceryItem+CoreDataProperties.swift in Sources */,
 				7FEB32B21DEB59BA004F9FFA /* Array+Extension.swift in Sources */,
